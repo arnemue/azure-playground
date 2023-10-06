@@ -25,4 +25,4 @@ jobs:
           export AZCOPY_SPA_CLIENT_SECRET=$(echo $AZURE_CREDENTIALS | jq -r '.["clientSecret"]')
           echo "::add-mask::$AZCOPY_SPA_APPLICATION_ID"
           echo "::add-mask::$AZCOPY_SPA_CLIENT_SECRET"
-          azcopy login status
+          azcopy copy dummy_file.txt https://iacstatestorage.blob.core.windows.net/demo/dummy_file.txt
