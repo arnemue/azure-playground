@@ -15,7 +15,7 @@ jobs:
 
       - name: Azcopy test
         run: |
-          AZURE_CREDENTIALS=${{ secrets[format('AZURE_CREDENTIALS')] }}
+          AZURE_CREDENTIALS="${{ secrets[format('AZURE_CREDENTIALS')] }}"
           export AZCOPY_TENANT_ID=$(echo $AZURE_CREDENTIALS | jq -r '.["tenantId"]')
           export AZCOPY_AUTO_LOGIN_TYPE=SPN
           export AZCOPY_SPA_APPLICATION_ID=$(echo $AZURE_CREDENTIALS | jq -r '.["clientId"]')
