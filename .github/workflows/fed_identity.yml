@@ -12,14 +12,14 @@ jobs:
   run-az-login:
     runs-on: ubuntu-latest
     environment:
-      name: "demo"
+      name: "preprd"
     steps:
       - name: "Az CLI login"
         uses: azure/login@v1
         with:
           client-id: "67b10ab5-36f7-4bf5-97c7-f109252748c7"
           tenant-id: "93f33571-550f-43cf-b09f-cd331338d086"
-          subscription-id: "7f6b62e8-ce09-4aed-8975-4b42e9fd036a"
+          subscription-id: "edcfb705-4450-49d4-a88b-7b32285bd309"
 
       - name: "Run Azure CLI commands"
         run: |
